@@ -10,7 +10,8 @@
 // @run-at       document-end
 // @grant        unsafeWindow
 // @grant        GM_addStyle
-// @author        二次修改 野草 www.jie668.cn  qq1069422720
+// @time         2018/08/12 11:00
+// @author        二次修改 野草 www.jie668.cn  qq1069422720  
 // @description   去掉了一健修改后缀 增加了一健加广告  文件和文件夹都可以。。。
 // ==/UserScript==
 
