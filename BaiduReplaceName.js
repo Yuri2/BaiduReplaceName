@@ -3,7 +3,7 @@
 // @namespace    dupanBatchRename
 // @version      0.1.1
 // @description  百度网盘一键批量加广告，批量替换文件名。【说明：批量改后缀强制改所有后缀，批量替换文件名可以替换一些垃圾版权信息】
-// @author       ding(AT)gong.si 
+// @author       ding(AT)gong.si
 // @match        *://pan.baidu.com/disk/home*
 // @match        *://yun.baidu.com/disk/home*
 // @require      https://code.jquery.com/jquery-latest.min.js
@@ -11,7 +11,7 @@
 // @grant        unsafeWindow
 // @grant        GM_addStyle
 // @time         2018/08/12 11:00
-// @author        二次修改 野草 www.jie668.cn  qq1069422720  
+// @author        二次修改 野草 www.jie668.cn  qq1069422720
 // @description   去掉了一健修改后缀 增加了一健加广告  文件和文件夹都可以。。。
 // ==/UserScript==
 
@@ -121,9 +121,9 @@ function getFileList(){
     });
     return filelist;
 }
-
 function rename(filelist){
-    url = panAPIUrl + 'filemanager?opera=rename&async=2&channel=chunlei&web=1&app_id=250528&bdstoken='+ bdstoken +'&logid='+ logid +'&clienttype=0';
+   // url = panAPIUrl + 'filemanager?opera=rename&async=2&channel=chunlei&web=1&app_id=250528&bdstoken='+ bdstoken +'&logid='+ logid +'&clienttype=0';
+    url = panAPIUrl + 'filemanager?opera=rename&async=2&onnest=fail&channel=chunlei&web=1&app_id=250528&bdstoken='+ bdstoken +'&logid='+ logid +'&clienttype=0';
     var params = {
         filelist:JSON.stringify(filelist),
     };
@@ -267,7 +267,7 @@ function do_addname() {
         return;
     }
     var q_sel = document.querySelectorAll('.icon-newfolder')[0].parentNode.parentNode.parentNode;
-    
+
     var ele_to_add2 = document.createElement('a');
     ele_to_add2.className = "g-button";
     ele_to_add2.onclick = do_replacename;
